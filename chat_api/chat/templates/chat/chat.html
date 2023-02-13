@@ -1,0 +1,49 @@
+<!-- templates/chat.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script>
+      var socket = io.connect("ws://" + window.location.host + "/ws/chat/");
+
+      socket.on("connect", function () {
+        console.log("Connected to the socket!");
+      });
+      socket.on("message", function (data) {
+        console.log("Received message:", data);
+
+        // display the message in the chat window
+        var chatWindow = document.getElementById("chat");
+        var message = document.createElement("p");
+        message.innerHTML = data["username"] + ": " + data["message"];
+        chatWindow.appendChild(message);
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById("message-form");
+        var input = document.getElementById("message-input");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // send the message to the server
+          socket.emit("message", {
+            message: input.value,
+          });
+
+          // clear the input field
+          input.value = "";
+        });
+      });
+    </script>
+  </head>
+</html>
+</head>
+<body>
+  <div id="chat"></div>
+  <form id="message-form">
+    <input id="message-input" type="text">
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>

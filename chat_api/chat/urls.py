@@ -1,4 +1,4 @@
-from chat.views import ConversationViewSet, CreateUser
+from chat.views import ConversationViewSet, CreateUser, ChatPageView
 
 from rest_framework.routers import DefaultRouter
 from django.urls import path
@@ -13,6 +13,9 @@ router.register(r'auth/register', CreateUser, basename='createuser')
 urlpatterns = []
 
                    
+urlpatterns.append(path("chat/", ChatPageView.as_view(), name="chat"))
+
+
 urlpatterns.append(path('token/', TokenObtainPairView.as_view()))
 urlpatterns.append(path('token/refresh/', TokenRefreshView.as_view()))
 urlpatterns.append(path('token/refresh/', TokenRefreshView.as_view()))

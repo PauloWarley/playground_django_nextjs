@@ -4,12 +4,14 @@ from django.contrib.auth.models import User
 
 from rest_framework import serializers
 
-class ConversationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Conversation
-        fields = ['username', 'phrase', 'posted_at']
-        
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'email', 'password']
+        fields = ['username']
+
+class ConversationSerializer(serializers.ModelSerializer):
+    user = UserSerializer(read_only=True)
+    
+    class Meta:
+        model = Conversation
+        fields = ['user', 'phrase', 'posted_at']
