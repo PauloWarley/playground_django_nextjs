@@ -32,7 +32,7 @@ const Login = () => {
         document.cookie = cookie.serialize('bearerToken', res.data.access, { path: '/' });
         document.cookie = cookie.serialize('bearerTokenRefresh', res.data.refresh, { path: '/' });
         // router.push('/')
-        setGoto(<Link href="/">Vá para o chat</Link>)
+        setGoto(<div><Link href="/">Clique aqui para ir ao chat</Link></div>)
       }
       
       // setInput('')
@@ -74,10 +74,11 @@ const Login = () => {
           <button type="submit">
             Login
           </button>
+          {goto}
+
         </form>
       </div>
       
-      {goto}
 
     </main>
   )
