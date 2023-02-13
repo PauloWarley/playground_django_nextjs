@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 import cookie from 'cookie'
+import Link from 'next/link'
 
 import styles from "../styles/Login.module.css"
 import { Router, useRouter } from "next/router"
@@ -31,7 +32,7 @@ const Login = () => {
         document.cookie = cookie.serialize('bearerToken', res.data.access, { path: '/' });
         document.cookie = cookie.serialize('bearerTokenRefresh', res.data.refresh, { path: '/' });
         // router.push('/')
-        setGoto(<a href="/">Vá para o chat</a>)
+        setGoto(<Link href="/">Vá para o chat</Link>)
       }
       
       // setInput('')
