@@ -1,12 +1,45 @@
 .main{
     width: 100vw;
     height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
+  .login_form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #001220;
+    border: 1px solid #357DB8;
+    border-radius: 30px;
+
+  }
   
-  
+  .login_field input{
+    height: 50px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #082336;
+    color: #4CADF0 ;
+    border-radius: 5px;
+    border: solid #4CADF0 2px;
+  }
+
+  .login_form button{
+    width: 70%;
+    height: 40px;
+    color: #011221;
+    background-color: #3DE6AF;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
   .form_chat{
     display: flex;
     justify-content: center;
