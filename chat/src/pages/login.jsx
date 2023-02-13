@@ -49,7 +49,7 @@ const Login = () => {
 
       <div className={styles.login_form}>
         <h1>Login</h1>
-        user: "krn" pass: "krn123"
+        user: &quot;krn&quot; pass: &quot;krn123&quot;
         <form onSubmit={handleSubmit}>
           <div className={styles.login_field}>
             <input
