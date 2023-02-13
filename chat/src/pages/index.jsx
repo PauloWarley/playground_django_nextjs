@@ -33,7 +33,7 @@ const ChatPage = ({bearerToken}) => {
   const handleSubmit = async event => {
     event.preventDefault()
     try {
-      const res = await axios.post('http://pwarley.pythonanywhere.com/', {
+      const res = await axios.post('https://pwarley.pythonanywhere.com/', {
         phrase: input,
         user: user_id
       }, {
@@ -51,7 +51,7 @@ const ChatPage = ({bearerToken}) => {
 
   useEffect(() => {
     try {
-      axios.get('http://pwarley.pythonanywhere.com/?format=json',
+      axios.get('https://pwarley.pythonanywhere.com/?format=json',
       {
         headers: {
           'Authorization': `Bearer ${getCookie('bearerToken')}`
