@@ -1,0 +1,101 @@
+.main{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+}
+
+
+
+.form_chat{
+  display: flex;
+  justify-content: center;
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  bottom: 3%;
+}
+
+.form_chat input{
+  width: 50%;
+  padding: 5px;
+  font-size: 22px;
+  border-radius: 10px 0 0 10px ;
+  background-color: #343541;
+  border-style: none;
+
+}
+
+.form_chat button{
+  color: white;
+  background-color: #343541;
+
+  border-radius: 0 10px 10px 0;
+  border-style: none;
+  padding: 10px;
+}
+
+.form_chat button svg{
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.form_chat button svg:hover{
+  cursor: pointer;
+  background-color: #232222;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.messages{
+  background-color: #343541;
+  height: 85%;
+  color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.messages ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.icon_profile_chat{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: -moz-linear-gradient(-45deg,  #4f6a86 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #4f6a86 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #4f6a86 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f6a86', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.name_profile_chat{
+  color: white;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+.message_client{
+  padding: 1% 20%;
+  display: flex;
+  align-items: center;
+}
+
+.message_server{
+  padding: 1% 20%;
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.message{
+  margin: 10px;
+  padding: 10px;
+  background-color: #4f6a86;
+  border-radius: 20px 20px 20px 20px;
+  height: 40%;
+  color: white;
+}

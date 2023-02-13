@@ -1,1 +1,3 @@
 /venv
+/chat/node_modules
+/chat/.next
