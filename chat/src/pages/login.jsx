@@ -49,7 +49,7 @@ const Login = () => {
 
       <div className={styles.login_form}>
         <h1>Login</h1>
-        user: &quot;krn&quot; pass: &quot;krn123&quot;
+        user: &quot;krn&quot; pass: &quot;krn123&quot; Caso dê algum erro ao fazer login, bastar recarregar a pagina.
         <form onSubmit={handleSubmit}>
           <div className={styles.login_field}>
             <input
