@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = async event => {
     event.preventDefault()
     try {
-      const res = await axios.post('http://127.0.0.1:8000/token/', {
+      const res = await axios.post('http://pwarley.pythonanywhere.com/token/', {
         "username": username,
         "password": password
       }, {
